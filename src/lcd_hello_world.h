@@ -48,6 +48,26 @@ static const unsigned char PROGMEM logo_bmp[] =
     0b00000000, 0b00110000
 };
 
+static const unsigned char PROGMEM arrowUp[] =
+    {
+        0b00000000,0b00000000,
+        0b00000001,0b10000000,
+        0b00000011,0b11000000,
+        0b00000111,0b11100000,
+        0b00001111,0b11110000,
+        0b00011111,0b11111000,
+        0b00111111,0b11111100,
+        0b00011111,0b11111000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000,
+        0b00000111,0b11100000
+    };
+
 void testDrawLine() {
     int16_t i;
 
@@ -337,6 +357,26 @@ void testAnimate(const uint8_t *bitmap, uint8_t w, uint8_t h) {
         }
     }
 }
+
+void drawText() {
+    int16_t padding = 4;
+    int16_t logoHeight = 16;
+    int16_t logoWidth = 16;
+    int16_t logoPosX = padding;
+    int16_t logoPosY = (display.height() - logoHeight) / 2;
+
+    display.clearDisplay();
+
+    display.setTextSize(3); // Normal 1:1 pixel scale
+    display.setTextColor(SSD1306_WHITE, SSD1306_BLACK); // Draw white text
+    display.setCursor(logoWidth+padding+padding, 0); // Start at top-left corner
+    display.drawBitmap(logoPosX, logoPosY, arrowUp, logoWidth, logoHeight, 1);
+    display.println(F("A"));
+
+    display.display();
+    delay(2000);
+}
+
 
 
 

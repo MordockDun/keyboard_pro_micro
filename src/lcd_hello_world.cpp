@@ -52,40 +52,41 @@ void setup() {
     // drawing operations and then update the screen all at once by calling
     // display.display(). These examples demonstrate both approaches...
 
+    drawText();
 
-    testDrawLine(); // Draw many lines
-
-    testDrawRect(); // Draw rectangles (outlines)
-
-    testFillRect(); // Draw rectangles (filled)
-
-    testDrawCircle(); // Draw circles (outlines)
-
-    testFillCircle(); // Draw circles (filled)
-
-    testDrawRoundRect(); // Draw rounded rectangles (outlines)
-
-    testFillRoundRect(); // Draw rounded rectangles (filled)
-
-    testDrawTriangle(); // Draw triangles (outlines)
-
-    testFillTriangle(); // Draw triangles (filled)
-
-    testDrawChar(); // Draw characters of the default font
-
-    testDrawStyles(); // Draw 'stylized' characters
-
-    testScrolltext(); // Draw scrolling text
-
-    testDrawBitmap(); // Draw a small bitmap image
+    // testDrawLine(); // Draw many lines
+    //
+    // testDrawRect(); // Draw rectangles (outlines)
+    //
+    // testFillRect(); // Draw rectangles (filled)
+    //
+    // testDrawCircle(); // Draw circles (outlines)
+    //
+    // testFillCircle(); // Draw circles (filled)
+    //
+    // testDrawRoundRect(); // Draw rounded rectangles (outlines)
+    //
+    // testFillRoundRect(); // Draw rounded rectangles (filled)
+    //
+    // testDrawTriangle(); // Draw triangles (outlines)
+    //
+    // testFillTriangle(); // Draw triangles (filled)
+    //
+    // testDrawChar(); // Draw characters of the default font
+    //
+    // testDrawStyles(); // Draw 'stylized' characters
+    //
+    // testScrolltext(); // Draw scrolling text
+    //
+    // testDrawBitmap(); // Draw a small bitmap image
 
     // Invert and restore display, pausing in-between
-    display.invertDisplay(true);
-    delay(1000);
-    display.invertDisplay(false);
-    delay(1000);
+    // display.invertDisplay(true);
+    // delay(1000);
+    // display.invertDisplay(false);
+    // delay(1000);
 
-    testAnimate(logo_bmp, LOGO_WIDTH, LOGO_HEIGHT); // Animate bitmaps
+    // testAnimate(logo_bmp, LOGO_WIDTH, LOGO_HEIGHT); // Animate bitmaps
 }
 
 void loop() {
